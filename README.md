@@ -42,13 +42,28 @@ It's designed to provide a quick start for projects requiring an MSSQL database.
 
    This will build and start the MSSQL Docker container in detached mode.
 
-## Connecting to the Database
+## Test Connecting to the Database via CLI
 
 To connect to the MSSQL database, use the provided `connect_to_db.sh` script:
 
 ```
 ./connect_to_db.sh
 ```
+
+## SQL client installation  (Azure Data Studio) ##
+1. **Download SQL workbench workbench**
+   - Go to: [Azure Data Studio Download](https://learn.microsoft.com/en-us/azure-data-studio/download-azure-data-studio).
+   - Click "Download Azure Data Studio".
+   - Unzip and move to applications.
+
+2. **Connect with Azure Data Studio**
+   - Create new project.
+   - Input the following (everything else keep default):
+     - Connection Type: Microsoft SQL server.
+     - Server: localhost,1433
+     - Authentication type: SQL Login.
+     - User name: sa
+     - Password: Admin123@@
 
 This script will facilitate connecting to your MSSQL instance.
 
